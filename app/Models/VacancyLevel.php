@@ -23,4 +23,10 @@ class VacancyLevel extends Model
         return '◎';
     }
 
+    // マジックメソッド　文字列に変換される際は以下のメソッドを実行
+    public function __toString()
+    {
+        return $this->mark();
+    }
+
 }
